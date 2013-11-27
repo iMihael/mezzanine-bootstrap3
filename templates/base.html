@@ -100,28 +100,28 @@
 
 <h1>{% block title %}{% endblock %}</h1>
 
-<ul class="breadcrumb">
+<ol class="breadcrumb">
 {% spaceless %}
 {% block breadcrumb_menu %}{% page_menu "pages/menus/breadcrumb.html" %}{% endblock %}
 {% endspaceless %}
-</ul>
+</ol>
 
 </div>
 
 <div class="container">
 <div class="row">
 
-<div class="span2 left">
+<div class="col-md-2 left">
     {% block left_panel %}
     <div class="panel tree">{% page_menu "pages/menus/tree.html" %}</div>
     {% endblock %}
 </div>
 
-<div class="span7 middle">
+<div class="col-md-7 middle">
     {% block main %}{% endblock %}
 </div>
 
-<div class="span3 right">
+<div class="col-md-3 right">
     {% nevercache %}
     {% include "includes/user_panel.html" %}
     {% endnevercache %}
