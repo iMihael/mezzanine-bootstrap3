@@ -10,18 +10,19 @@ $(function() {
         $('.reply-form').hide();
         $(this).next('.reply-form').toggle();
     });
+    $(".my-input-group :input").addClass('form-control');
 });
 </script>
 <style>.input_id_honeypot {display:none !important;}</style>
 {% comment_thread object_for_comments %}
 <h3>{% trans "New Comment" %}</h3>
-<form method="post" id="comment" action="{{ comment_url }}#comment" class="input-group">
+<form method="post" id="comment" action="{{ comment_url }}#comment" class="my-input-group">
     {% if not request.POST.replied_to %}
     {% fields_for posted_comment_form %}
     {% else %}
     {% fields_for unposted_comment_form %}
     {% endif %}
-    <div class="form-actions">
+    <div class="">
         <input class="btn btn-primary btn-large" type="submit" value="{% trans "Comment" %}">
     </div>
 </form>

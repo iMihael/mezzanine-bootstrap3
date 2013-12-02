@@ -1,0 +1,48 @@
+{% extends "pages/page.html" %}
+
+{% load mezzanine_tags staticfiles %}
+
+{% block extra_js %}
+{{ block.super }}
+{#<script src="{{ STATIC_URL }}js/lightbox-2.6.min.js"></script>#}
+{#<link href="{{ STATIC_URL }}css/lightbox.css" rel="stylesheet" />#}
+
+<script type="text/javascript" src="{{ STATIC_URL }}js/fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}js/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}js/fancybox/jquery.fancybox-1.3.4.css" media="screen" />
+<script src="{{ STATIC_URL }}js/gallery.js"></script>
+
+{% endblock %}
+
+{% block main %}
+{{ block.super }}
+
+{% editable page.gallery.content %}
+{{ page.gallery.content|richtext_filters|safe }}
+{% endeditable %}
+
+{#<ul class="thumbnails gallery">#}
+<div class="row gallery thumbnails">
+{% with page.gallery.images.all as images %}
+{% for image in images %}
+<div class="col-sm-6 col-md-3">
+{#    <a class="thumbnail" data-lightbox="roadtrip" rel="#image-{{ image.id }}" title="{{ image.description }}" href="{{ MEDIA_URL }}{{ image.file }}">#}
+{#        <img class="image-overlay-thumb" src="{{ MEDIA_URL }}{% thumbnail image.file 75 75 %}">#}
+{#    </a>#}
+
+    <a class="thumbnail" rel="thumbnail_group" title="{{ image.description }}" href="{{ MEDIA_URL }}{{ image.file }}">
+        <img class="" src="{{ MEDIA_URL }}{% thumbnail image.file 75 75 %}">
+    </a>
+
+{#    <div id="image-{{ image.id }}" class="image-overlay" style="display:none;">#}
+{#        <a href="#" class="image-overlay-prev">&larr;</a>#}
+{#        <a href="#" class="image-overlay-next">&rarr;</a>#}
+{#        <img class="image-overlay-full" src="{{ MEDIA_URL }}{% thumbnail image.file 0 600 %}"><br>#}
+{#        <p>{{ image.description }}<br>{{ forloop.counter }} / {{ images|length }}</p>#}
+{#    </div>#}
+</div>
+{% endfor %}
+{% endwith %}
+</div>
+{% endblock %}
+
