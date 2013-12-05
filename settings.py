@@ -105,7 +105,7 @@ USE_TZ = True
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
-LANGUAGE_CODE = "en"
+LANGUAGE_CODE = "ru"
 
 # A boolean that turns on/off debug mode. When set to ``True``, stack traces
 # are displayed for error pages. Should always be set to ``False`` in
@@ -119,7 +119,7 @@ SITE_ID = 1
 
 # If you set this to False, Django will make some optimizations so as not
 # to load the internationalization machinery.
-USE_I18N = False
+USE_I18N = True
 
 # Make these unique, and don't share it with anybody.
 SECRET_KEY = "8ae21dd1-bb84-4ca1-9ba1-ee4be90c9bd136aa2ad9-16d6-47e3-b7e9-afcfe665c1c3ce67b17f-c7e6-49b2-9cf6-ea22625358a6"
