@@ -220,3 +220,15 @@ a.btn-large, input.btn-large {width:auto; min-width:100px; margin-right:10px;}
 {
     height:9px;
 }
+.main-image
+{
+    padding-top:30px;
+}
+.main-image img
+{
+    opacity: 0.8;
+}
+.main-image img:hover
+{
+    opacity: 1;
+}

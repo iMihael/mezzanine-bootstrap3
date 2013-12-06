@@ -1,32 +1,152 @@
-{% extends "base.html" %}
-{% load i18n %}
+<!doctype html>
+<html lang="{{ LANGUAGE_CODE }}"{% if LANGUAGE_BIDI %} dir="rtl"{% endif %}>
+{% load pages_tags mezzanine_tags i18n future staticfiles %}
+<head>
 
-{% block meta_title %}{% trans "Home" %}{% endblock %}
-{% block title %}{% trans "Home" %}{% endblock %}
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width">
+<meta name="keywords" content="{% block meta_keywords %}{% endblock %}">
+<meta name="description" content="{% block meta_description %}{% endblock %}">
+<title>{% block meta_title %}{% endblock %}{% trans "Home" %}{% if settings.SITE_TITLE %} | {{ settings.SITE_TITLE }}{% endif %}</title>
+<link rel="shortcut icon" href="{{ STATIC_URL }}img/python.ico">
 
-{% block breadcrumb_menu %}
-<li class="active">{% trans "Home" %}</li>
-{% endblock %}
+{% ifinstalled mezzanine.blog %}
+<link rel="alternate" type="application/rss+xml" title="RSS" href="{% url "blog_post_feed" "rss" %}">
+<link rel="alternate" type="application/atom+xml" title="Atom" href="{% url "blog_post_feed" "atom" %}">
+{% endifinstalled %}
 
-{% block main %}
-{% blocktrans %}
-<h2>Congratulations!</h2>
-<p>
-    Welcome to your new Mezzanine powered website.
-    Here are some quick links to get you started:
-</p>
-<ul>
-    <li><a href="/admin/">Log in to the admin interface</a></li>
-    <li><a href="http://mezzanine.jupo.org/docs/content-architecture.html">Creating custom page types</a></li>
-    <li><a href="http://mezzanine.jupo.org/docs/frequently-asked-questions.html#templates">Modifying HTML templates</a></li>
-    <li><a href="http://mezzanine.jupo.org/docs/frequently-asked-questions.html#why-isn-t-the-homepage-a-page-object-i-can-edit-via-the-admin">Changing this homepage</a></li>
-    <li><a href="http://mezzanine.jupo.org/docs/frequently-asked-questions.html">Other frequently asked questions</a></li>
-    <li><a href="http://mezzanine.jupo.org/docs/configuration.html#default-settings">Full list of settings</a></li>
-    <li><a href="http://mezzanine.jupo.org/docs/deployment.html">Deploying to a production server</a></li>
-</ul>
-{% endblocktrans %}
-{% endblock %}
+{% compress css %}
+<link rel="stylesheet" href="{% static "css/bootstrap.min.css" %}">
+<link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic,700italic&subset=latin,cyrillic-ext,cyrillic' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{% static "css/mezzanine.css" %}">
+{% if LANGUAGE_BIDI %}
+<link rel="stylesheet" href="{% static "css/rtl.css" %}">
+{% endif %}
+{% ifinstalled cartridge.shop %}
+<link rel="stylesheet" href="{% static "css/cartridge.css" %}">
+{% if LANGUAGE_BIDI %}
+<link rel="stylesheet" href="{% static "css/cartridge.rtl.css" %}">
+{% endif %}
+{% endifinstalled %}
+{% block extra_css %}{% endblock %}
+{% endcompress %}
 
-{% block right_panel %}
-{% include "blog/includes/filter_panel.html" %}
-{% endblock %}
+{% compress js %}
+<script src="{% static "mezzanine/js/"|add:settings.JQUERY_FILENAME %}"></script>
+<script src="{{ STATIC_URL }}js/bootstrap.min.js"></script>
+{% block extra_js %}{% endblock %}
+{% endcompress %}
+<!--[if lt IE 9]>
+<script src="{% static "js/html5shiv.js" %}"></script>
+<![endif]-->
+
+{% block extra_head %}{% endblock %}
+
+</head>
+<body id="{% block body_id %}body{% endblock %}">
+
+<header class="navbar navbar-default navbar-fixed-top bs-docs-nav" role="banner">
+            <div class="container">
+                 <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                    </button>
+                        <a class="navbar-brand" href="/">{{ settings.SITE_TITLE }}</a>
+                  </div>
+
+                <nav class="collapse navbar-collapse bs-navbar-collapse navbar-ex1-collapse" role="navigation">
+                    {% search_form "all" %}
+                    {% page_menu "pages/menus/dropdown.html" %}
+                </nav>
+
+            </div>
+        </header>
+
+<div class="container">
+<div class="protector"></div>
+{% nevercache %}
+{% for message in messages %}
+<div class="alert alert-{{ message.tags }}" data-alert="alert">
+    <a class="close" href="#" onclick="$(this).parent().fadeOut('fast'); return false;">×</a>{{ message }}
+</div>
+{% endfor %}
+{% endnevercache %}
+
+
+{#<h1>{% block title %}{% endblock %}</h1>#}
+{##}
+{#<ol class="breadcrumb">#}
+{#{% spaceless %}#}
+{#{% block breadcrumb_menu %}{% page_menu "pages/menus/breadcrumb.html" %}{% endblock %}#}
+{#{% endspaceless %}#}
+{#</ol>#}
+
+</div>
+
+<div class="container">
+<div class="row">
+
+    <div class="col-md-4 main-image">
+        <a href="#">
+        <img src="/static/img/php.png" style="width:100%;" />
+        </a>
+    </div>
+    <div class="col-md-4 main-image">
+        <a href="#">
+        <img src="/static/img/python.png" style="width:100%;" />
+        </a>
+    </div>
+    <div class="col-md-4 main-image">
+        <a href="#">
+        <img src="/static/img/js.png" style="width:100%;" />
+        </a>
+    </div>
+</div>
+
+<div class="row">
+
+    <div class="col-md-4 main-image">
+        <a href="#">
+        <img src="/static/img/term.png" style="width:100%;" />
+        </a>
+    </div>
+    <div class="col-md-4 main-image">
+        <a href="#">
+        <img src="/static/img/c.png" style="width:100%;" />
+        </a>
+    </div>
+    <div class="col-md-4 main-image">
+        <a href="#">
+        <img src="/static/img/music.png" style="width:100%;" />
+        </a>
+    </div>
+</div>
+
+{#<div class="col-md-9 middle">#}
+{#    {% block main %}{% endblock %}#}
+{#</div>#}
+{##}
+{#<div class="col-md-3 right">#}
+{#    {% nevercache %}#}
+{#    {% include "includes/user_panel.html" %}#}
+{#    {% endnevercache %}#}
+{#    <div class="panel">#}
+{#    {% block right_panel %}#}
+{#    {% ifinstalled mezzanine.twitter %}#}
+{#    {% include "twitter/tweets.html" %}#}
+{#    {% endifinstalled %}#}
+{#    {% endblock %}#}
+{#    </div>#}
+{#</div>#}
+
+
+</div>
+
+
+{% include "includes/footer_scripts.html" %}
+
+</body>
+</html>
