@@ -94,10 +94,11 @@ a.btn-large, input.btn-large {width:auto; min-width:100px; margin-right:10px;}
 .tag-weight-2 {font-size:120%;}
 .tag-weight-3 {font-size:150%;}
 .tag-weight-4 {font-size:180%;}
-.share-twitter, .share-facebook, .share-twitter:hover, .share-facebook:hover {
+.share-twitter, .share-facebook, .share-vk, .share-twitter:hover, .share-facebook:hover, .share-vk:hover {
     color:#fff; margin:5px 5px 30px 0; font-weight:bold; text-shadow:none;}
 .share-twitter {background:#00a3d4 !important;}
 .share-facebook {background:#4667a6 !important;}
+.share-vk {background: #0065a6 !important;}
 .featured-thumb {float:right; width:90px; height:90px; margin:0 0 10px 10px;}
 
 
