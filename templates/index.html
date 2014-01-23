@@ -1,152 +1,274 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="{{ LANGUAGE_CODE }}"{% if LANGUAGE_BIDI %} dir="rtl"{% endif %}>
 {% load pages_tags mezzanine_tags i18n future staticfiles %}
 <head>
 
-<meta http-equiv="Content-type" content="text/html; charset=utf-8">
-<meta name="viewport" content="width=device-width">
-<meta name="keywords" content="{% block meta_keywords %}{% endblock %}">
-<meta name="description" content="{% block meta_description %}{% endblock %}">
-<title>{% block meta_title %}{% endblock %}{% trans "Home" %}{% if settings.SITE_TITLE %} | {{ settings.SITE_TITLE }}{% endif %}</title>
+<meta charset="utf-8" />
 <link rel="shortcut icon" href="{{ STATIC_URL }}img/python.ico">
 
-{% ifinstalled mezzanine.blog %}
-<link rel="alternate" type="application/rss+xml" title="RSS" href="{% url "blog_post_feed" "rss" %}">
-<link rel="alternate" type="application/atom+xml" title="Atom" href="{% url "blog_post_feed" "atom" %}">
-{% endifinstalled %}
 
-{% compress css %}
-<link rel="stylesheet" href="{% static "css/bootstrap.min.css" %}">
-<link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic,700italic&subset=latin,cyrillic-ext,cyrillic' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="{% static "css/mezzanine.css" %}">
-{% if LANGUAGE_BIDI %}
-<link rel="stylesheet" href="{% static "css/rtl.css" %}">
-{% endif %}
-{% ifinstalled cartridge.shop %}
-<link rel="stylesheet" href="{% static "css/cartridge.css" %}">
-{% if LANGUAGE_BIDI %}
-<link rel="stylesheet" href="{% static "css/cartridge.rtl.css" %}">
-{% endif %}
-{% endifinstalled %}
-{% block extra_css %}{% endblock %}
-{% endcompress %}
+<!--  Mobile viewport optimized: j.mp/bplateviewport -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-{% compress js %}
-<script src="{% static "mezzanine/js/"|add:settings.JQUERY_FILENAME %}"></script>
-<script src="{{ STATIC_URL }}js/bootstrap.min.js"></script>
-{% block extra_js %}{% endblock %}
-{% endcompress %}
-<!--[if lt IE 9]>
-<script src="{% static "js/html5shiv.js" %}"></script>
+<!--[if lte IE 7]> <div style=' text-align:center; clear: both; padding:0 0 0 15px; position: relative;'> <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div> <![endif]-->
+
+<title>2Q [Took You]</title>
+
+<!--[if LT IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 
-{% block extra_head %}{% endblock %}
+<link href='{{ STATIC_URL }}css/565e1e1a274c853f547b80c75d1c310b.css' rel='stylesheet' type='text/css'>
+<link href='{{ STATIC_URL }}css/boilerplate.css' rel='stylesheet' type='text/css'>
+<link href='{{ STATIC_URL }}css/follow.css' rel='stylesheet' type='text/css'>
+
+<link href='{{ STATIC_URL }}css/style.css' rel='stylesheet' type='text/css'>
+<link href='{{ STATIC_URL }}css/superfish-navbar.css' rel='stylesheet' type='text/css'>
+<link href='{{ STATIC_URL }}css/superfish-vertical.css' rel='stylesheet' type='text/css'>
+<link href='{{ STATIC_URL }}css/superfish.css' rel='stylesheet' type='text/css'>
+<link href='{{ STATIC_URL }}css/system.base.css' rel='stylesheet' type='text/css'>
+<link href='{{ STATIC_URL }}css/system.menus.css' rel='stylesheet' type='text/css'>
+
+
+<script type='text/javascript' src='{{ STATIC_URL }}js/jquery.js'></script>
+<script type='text/javascript' src='{{ STATIC_URL }}js/sftouchscreen.js'></script>
+<script type='text/javascript' src='{{ STATIC_URL }}js/styleswitch.js'></script>
+<script type='text/javascript' src='{{ STATIC_URL }}js/superfish.js'></script>
+<script type='text/javascript' src='{{ STATIC_URL }}js/supersubs.js'></script>
+<script type='text/javascript' src='{{ STATIC_URL }}js/supposition.js'></script>
+
+
+
+
+
 
 </head>
-<body id="{% block body_id %}body{% endblock %}">
+<body id="body" class="html front not-logged-in no-sidebars page-home with-navigation with-subnav" >
 
-<header class="navbar navbar-default navbar-fixed-top bs-docs-nav" role="banner">
-            <div class="container">
-                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                      <span class="sr-only">Toggle navigation</span>
-                      <span class="icon-bar"></span>
-                      <span class="icon-bar"></span>
-                      <span class="icon-bar"></span>
-                    </button>
-                        <a class="navbar-brand" href="/">{{ settings.SITE_TITLE }}</a>
-                  </div>
 
-                <nav class="collapse navbar-collapse bs-navbar-collapse navbar-ex1-collapse" role="navigation">
-                    {% search_form "all" %}
-                    {% page_menu "pages/menus/dropdown.html" %}
-                </nav>
+<div id="page-wrapper">
 
-            </div>
-        </header>
+  <div id="page">
 
-<div class="container">
-<div class="protector"></div>
-{% nevercache %}
-{% for message in messages %}
-<div class="alert alert-{{ message.tags }}" data-alert="alert">
-    <a class="close" href="#" onclick="$(this).parent().fadeOut('fast'); return false;">×</a>{{ message }}
+    <header id="header" role="banner" class="clearfix">
+        <div class="section-1 clearfix">
+			        </div>
+
+
+
+    </header><!-- /#header -->
+
+
+  <div id="main-wrapper">
+    <div id="main" class="clearfix">
+
+    	<div >
+            <div >
+
+
+                  <div id="content" class="column" role="main">
+                    <div class="section">
+
+
+
+
+
+
+                                          <div class="tabs"></div>
+
+
+
+                                          <div class="region region-content">
+    <div id="block-system-main" class="block block-system block-odd">
+
+
+  <div class="content">
+    <div class="panel-flexible panels-flexible-simple_subpage clearfix" id="home">
+<div class="panel-flexible-inside panels-flexible-simple_subpage-inside">
+<div class="panels-flexible-row panels-flexible-row-simple_subpage-main-row panels-flexible-row-first clearfix">
+  <div class="inside panels-flexible-row-inside panels-flexible-row-simple_subpage-main-row-inside panels-flexible-row-inside-first clearfix">
+<div class="panels-flexible-region panels-flexible-region-simple_subpage-center panels-flexible-region-first panels-flexible-region-last">
+  <div class="inside panels-flexible-region-inside panels-flexible-region-simple_subpage-center-inside panels-flexible-region-inside-first panels-flexible-region-inside-last">
+<div class="panel-pane pane-block pane-block-7" >
+
+
+
+  <div class="pane-content">
+    <p><img src="{{ STATIC_URL }}images/big-logo.png" width="440" height="100" /></p>  </div>
+
+
+  </div>
+  </div>
 </div>
-{% endfor %}
-{% endnevercache %}
+  </div>
+</div>
+<div class="panels-flexible-row panels-flexible-row-simple_subpage-1 panels-flexible-row-last clearfix Bottom">
+  <div class="inside panels-flexible-row-inside panels-flexible-row-simple_subpage-1-inside panels-flexible-row-inside-last clearfix">
+<div class="panels-flexible-region panels-flexible-region-simple_subpage-bottom panels-flexible-region-first panels-flexible-region-last bottom-region">
+  <div class="inside panels-flexible-region-inside panels-flexible-region-simple_subpage-bottom-inside panels-flexible-region-inside-first panels-flexible-region-inside-last">
+<div class="panel-pane pane-block pane-views-music-player-block" >
+
+        <h2 class="pane-title">Music player</h2>
 
 
-{#<h1>{% block title %}{% endblock %}</h1>#}
-{##}
-{#<ol class="breadcrumb">#}
-{#{% spaceless %}#}
-{#{% block breadcrumb_menu %}{% page_menu "pages/menus/breadcrumb.html" %}{% endblock %}#}
-{#{% endspaceless %}#}
-{#</ol>#}
+  <div class="pane-content">
+    <div class="view view-music-player view-id-music_player view-display-id-block view-dom-id-233ef270cbc95981c871840eda4f4f5b">
 
+
+  <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+
+  <div class="views-field views-field-field-music-file">        <div class="field-content">
+
+  	<div style="margin-top:45px;opacity: 0.7" id="miplay">
+
+  	</div>
+
+<div style="display: none;" class="jp-audio">
+  <div class="jp-type-playlist">
+
+    <div id="jplayer-node-80-field-music-file-1358944597_interface" class="jp-interface">
+
+      <div class="views-field views-field-title">
+       <span class="field-content">МУЗЫКА</span>
+</div>
+  <div class="views-field views-field-field-artist">
+    <div class="field-content">Лови волну</div>
+    <div style="z-index:1001;">
+
+    </div>
+  </div>
+
+
+    </div>
+
+       <div class="view-footer">
+      <p><a href="releases.html">Все песни</a></p>
+    </div>
+
+
+  </div>
 </div>
 
-<div class="container">
-<div class="row">
+</div>  </div>
 
-    <div class="col-md-4 main-image">
-        <a href="#">
-        <img src="/static/img/php.png" style="width:100%;" />
-        </a>
-    </div>
-    <div class="col-md-4 main-image">
-        <a href="#">
-        <img src="/static/img/python.png" style="width:100%;" />
-        </a>
-    </div>
-    <div class="col-md-4 main-image">
-        <a href="#">
-        <img src="/static/img/js.png" style="width:100%;" />
-        </a>
-    </div>
-</div>
-
-<div class="row">
-
-    <div class="col-md-4 main-image">
-        <a href="#">
-        <img src="/static/img/term.png" style="width:100%;" />
-        </a>
-    </div>
-    <div class="col-md-4 main-image">
-        <a href="#">
-        <img src="/static/img/c.png" style="width:100%;" />
-        </a>
-    </div>
-    <div class="col-md-4 main-image">
-        <a href="#">
-        <img src="/static/img/music.png" style="width:100%;" />
-        </a>
-    </div>
-</div>
-
-{#<div class="col-md-9 middle">#}
-{#    {% block main %}{% endblock %}#}
-{#</div>#}
-{##}
-{#<div class="col-md-3 right">#}
-{#    {% nevercache %}#}
-{#    {% include "includes/user_panel.html" %}#}
-{#    {% endnevercache %}#}
-{#    <div class="panel">#}
-{#    {% block right_panel %}#}
-{#    {% ifinstalled mezzanine.twitter %}#}
-{#    {% include "twitter/tweets.html" %}#}
-{#    {% endifinstalled %}#}
-{#    {% endblock %}#}
-{#    </div>#}
-{#</div>#}
 
 
 </div>
 
 
-{% include "includes/footer_scripts.html" %}
+    </div>
+
+
+
+
+
+
+
+</div>  </div>
+
+
+  </div>
+<div class="panel-separator"></div><div class="panel-pane pane-block pane-superfish-1" >
+
+        <h2 class="pane-title">Main menu</h2>
+
+
+  <div class="pane-content">
+    <ul id="superfish-1" class="sf-menu main-menu sf-horizontal sf-style-default sf-total-items-5 sf-parent-items-1 sf-single-items-4">
+  <li id="menu-1333-1" class="first odd sf-item-1 sf-depth-1 sf-no-children">
+    <a href="/о-нас" class="sf-depth-1 ">О нас</a>
+</li>
+<li id="menu-1437-1" class="middle even sf-item-2 sf-depth-1 sf-no-children">
+<a href="news.html" class="sf-depth-1 ">Новости</a>
+</li>
+<li id="menu-668-1" class="middle odd sf-item-3 sf-depth-1 sf-no-children">
+<a href="video.html" title="" class="sf-depth-1 ">Видео</a>
+</li>
+<li id="menu-739-1" class="middle even sf-item-4 sf-depth-1 sf-total-children-3 sf-parent-children-0 sf-single-children-3 menuparent">
+<a href="releases.html" title="" class="sf-depth-1  menuparent">Музыка</a>
+<ul>
+<li id="menu-1145-1" class="first odd sf-item-1 sf-depth-2 sf-no-children">
+<a href="#" class="sf-depth-2 ">Суб1</a>
+</li>
+<li id="menu-1146-1" class="middle even sf-item-2 sf-depth-2 sf-no-children">
+<a href="#" title="" class="sf-depth-2 ">Суб2</a>
+</li><li id="menu-1147-1" class="last odd sf-item-3 sf-depth-2 sf-no-children">
+<a href="#" title="" class="sf-depth-2 ">Суб3</a>
+</li></ul></li>
+<li id="menu-442-1" class="last odd sf-item-5 sf-depth-1 sf-no-children">
+<a href="contact.html" title="" class="sf-depth-1 ">Контакты</a></li></ul>
+</div>
+
+
+  </div>
+  </div>
+</div>
+  </div>
+</div>
+</div>
+</div>
+  </div><!-- /.content -->
+
+</div><!-- /.block -->  </div>
+
+                    </div><!-- /.section -->
+                  </div><!-- /#content -->
+
+        	</div>
+        </div>
+
+    </div><!-- /#main -->
+  </div><!-- /#main-wrapper -->
+
+  </div><!-- /#page -->
+
+  <footer id="footer" role="contentinfo">
+        <div class="footer-wrapper clearfix">
+			  <div class="region region-footer">
+    <div id="block-block-5" class="block block-block block-even">
+
+
+  <div class="content">
+    2Q [Took You] &copy; 2013  <!--<a href="http://mihaelgroup.com">MG</a>-->  </div><!-- /.content -->
+
+</div><!-- /.block --><div id="block-system-user-menu" class="block block-system block-menu block-odd">
+
+
+  <div class="content" style="margin-top:4px;">
+<ul class="menu clearfix"><li class="first leaf contacts mid-1290"><a href="contact.html" title="">Contacts</a></li>
+<!--<li class="last leaf search mid-1057"><a href="#" title="">Search</a></li>-->
+    <li class="last leaf search mid-1057"><span style="color: #fff;">Designed by</span> <a target="_blank" href="http://mihael.me" title="">Mihael</a></li>
+</ul>  </div><!-- /.content -->
+
+</div><!-- /.block --><div id="block-follow-site" class="block block-follow block-even">
+
+
+  <div class="content">
+    <div class="follow-links clearfix"><a target="_blank" href="http://www.youtube.com/user/2Qmusic" class="follow-link follow-link-youtube follow-link-site" title="Follow 2Q on YouTube">YouTube</a>
+<a target="_blank" href="http://vk.com/2q_group" class="follow-link follow-link-this-site follow-link-site" title="Follow 2Q on VK"></a>
+<!--<a target="_blank" href="http://facebook.com/" class="follow-link follow-link-facebook follow-link-site" title="Follow 2Q on Facebook">Facebook</a>
+<a target="_blank" href="http://twitter.com/" class="follow-link follow-link-flickr follow-link-site" title="Follow 2Q on Twitter">Twitter</a>-->
+</div>  </div><!-- /.content -->
+
+</div><!-- /.block --><div id="block-block-6" class="block block-block block-odd">
+
+
+  <div class="content">
+    <ul id="styleSwitch"><li id="style1" class=""><a href="#"></a></li>
+<li id="style2" class=""><a href="#"></a></li>
+<li id="style3" class=""><a href="#"></a></li>
+<li id="style4" class=""><a href="#"></a></li>
+<li id="style5" class=""><a href="#"></a></li>
+</ul>  </div><!-- /.content -->
+
+</div><!-- /.block -->  </div>
+            <!--{FOOTER_LINK} -->        </div><!-- /#footer-wrapper -->
+    </footer><!-- /#footer -->
+</div><!-- /#page-wrapper -->
+
+
+
 
 </body>
 </html>

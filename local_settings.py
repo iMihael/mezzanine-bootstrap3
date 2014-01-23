@@ -6,16 +6,16 @@ TEST_RUNNER = 'django.test.simple.DjangoTestSuiteRunner'
 DATABASES = {
     "default": {
         # Ends with "postgresql_psycopg2", "mysql", "sqlite3" or "oracle".
-        "ENGINE": "django.db.backends.sqlite3",
+        "ENGINE": "django.db.backends.mysql",
         # DB name or path to database file if using sqlite3.
-        "NAME": "dev.db",
+        "NAME": "mezzanine",
         # Not used with sqlite3.
-        "USER": "",
+        "USER": "root",
         # Not used with sqlite3.
-        "PASSWORD": "",
+        "PASSWORD": "didiom17",
         # Set to empty string for localhost. Not used with sqlite3.
-        "HOST": "",
+        "HOST": "127.0.0.1",
         # Set to empty string for default. Not used with sqlite3.
-        "PORT": "",
+        "PORT": "3306",
     }
 }

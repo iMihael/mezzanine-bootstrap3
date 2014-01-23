@@ -1,0 +1,70 @@
+.photo_album
+{
+	float:left;
+	margin-right:3px;
+	width:199px;
+	margin-bottom:5px;
+}
+.photo_album img
+{
+	/*border:1px solid #ccc;*/
+	width:199px;
+	height:140px;
+}
+.album_title
+{
+	text-align:center;
+	font-family:Verdana Georgia;
+	font-weight:bold;
+}
+.rel_left_col
+{
+	padding-left:10px;
+}
+.rel_title
+{
+	/*margin-left:10px;*/
+	font-family: Verdana Georgia;
+	font-size:20px;
+}
+.rel_type
+{
+	/*margin-left:10px;*/
+	font-family: Verdana Georgia;
+	font-size:18px;
+	color:#E43110;
+}
+.rel_description a
+{
+	font-size:16px;
+}
+.rel_description
+{
+	
+}
+.rel_audio
+{
+	/*margin-left:10px;*/
+	margin-top:5px;
+}
+.rel_audio audio
+{
+	width:300px;
+}
+.rel_con
+{
+	border-bottom:1px solid #ccc;
+	padding-bottom:5px;
+	margin-bottom:5px;
+	height:107px;
+}
+.rel_con img
+{
+	width:107px;
+	height:107px;
+}
+.clear
+{
+	clear:both;
+}
+

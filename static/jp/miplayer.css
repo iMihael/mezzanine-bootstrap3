@@ -1,0 +1,140 @@
+.mi-btn
+{
+	display:inline-block;
+	width:14px;
+	height:14px;
+	background-image: url("glyphicons-halflings.png");
+}
+.mi-download
+{
+	background-position: -96px -24px;
+}
+.mi-volume
+{
+	background-position: -408px -24px;
+}
+.mi-play
+{
+	background-position: -264px -72px;
+}
+
+.mi-pause
+{
+	background-position: -288px -72px;
+}
+.mi-prev
+{
+	background-position: -240px -72px;
+}
+.mi-next
+{
+	background-position: -336px -72px;
+}
+
+.mi-seek-bar
+{
+	height:10px;
+	background:#999;
+	border-radius:6px;
+}
+.mi-play-bar
+{
+	height:10px;
+	background:#fff;
+	border-radius:6px;
+}
+.mi-prgs-bar
+{
+	border-radius:6px;
+	width:100%;
+	background:#ccc;
+	border:1px solid #000;
+}
+.mi-current-time
+{
+	font-size:13px;
+	line-height:15px;
+}
+.mi-duration
+{
+	font-size:13px;
+	line-height:15px;
+}
+.clear
+{
+	clear:both;
+}
+.mi-volume-bar
+{
+	height:10px;
+	background:#999;
+	border-radius:6px;
+	border:1px solid #000;
+	width:100%;
+}
+.mi-volume-bar-value
+{
+	background:#fff;
+	height:10px;
+	border-radius:6px;
+}
+.titletd
+{
+	line-height:22px;
+	cursor:pointer;
+}
+.durationtd
+{
+	line-height:22px;
+}
+
+#tracklist
+{
+	padding-top:3px;
+}
+.playtd
+{
+	width:40px;padding-top:4px;
+}
+
+.controller
+{
+    width:620px;border:0;border-collapse: inherit;margin-bottom:0;
+}
+
+.td1
+{
+    width:51px;padding-top:5px;
+}
+.td2
+{
+    width:30px;
+}
+.td3
+{
+    width:400px;padding-top:3px;
+}
+.td4
+{
+    padding-left:4px;width:33px;
+}
+.td5
+{
+    padding-top:3px;padding-left:3px;width:14px;
+}
+.td6
+{
+    padding-top:3px;width:60px;
+}
+#jp_container_1
+{
+    width:640px;
+    margin:0 auto;
+}
+#tracklist
+{
+    margin-left:55px;
+    margin-top:10px;
+}
+
+
